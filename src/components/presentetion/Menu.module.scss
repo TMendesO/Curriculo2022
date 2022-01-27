@@ -1,0 +1,41 @@
+@import "../../Sass/variables.scss";
+
+.menu {
+  list-style: none;
+  position: absolute;
+  left: 65%;
+}
+.menu li {
+  display: inline;
+  margin: 0 0 0 15px;
+  cursor: pointer;
+}
+.menu li a {
+  padding: 2px 5px;
+  display: inline-block;
+}
+
+.menu li a:hover {
+  transform: scale(1.04);
+  color: $base-color;
+}
+
+.about {
+  @include menu;
+}
+.experience {
+  @include menu;
+}
+.formation {
+  @include menu;
+}
+.contact {
+  @include menu;
+}
+
+hr {
+  margin-top: -1.9%;
+  margin-left: 32%;
+  width: 40%;
+  border-color: $base-color;
+}

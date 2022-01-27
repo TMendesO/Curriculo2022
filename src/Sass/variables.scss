@@ -1,0 +1,12 @@
+$clear-color: #ffe2df;
+$middle-color: #ffd3cf;
+$base-color: #ff6f61;
+
+$first-font: Julius Sans One, Roboto;
+$second-font: Quicksand, roboto;
+
+@mixin menu {
+  font-family: $first-font;
+  font-size: 16px;
+  font-weight: 800;
+}
