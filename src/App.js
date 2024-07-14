@@ -1,17 +1,12 @@
 import "./App.scss";
-import Presentetion from "./components/presentetion/Presentetion";
-import About from "./components/about/About";
+import React from "react";
+import Router from "./Router";
 
 function App() {
   return (
-    <>
-      <div className="container">
-        <Presentetion />
-      </div>
-      <div>
-        <About />
-      </div>
-    </>
+    <div className="App">
+      <Router />
+    </div>
   );
 }
 

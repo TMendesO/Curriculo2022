@@ -1,0 +1,53 @@
+@import "../../Sass/variables.scss";
+
+.container {
+  width: 100%;
+  height: 625px;
+  overflow: scroll;
+}
+.rectangle {
+  background-color: $base-color;
+  margin-left: 5%;
+  border-radius: 5%;
+}
+
+.title {
+  margin-top: 12%;
+  margin-left: 5%;
+  font-family: $first-font;
+  font-size: 58px;
+  position: fixed;
+}
+
+.line {
+  margin-top: 2%;
+  margin-left: 15%;
+  width: 20%;
+  border-color: $base-color;
+}
+
+.text {
+  font-family: $second-font;
+  margin-left: 55vh;
+  text-indent: 0.5em;
+  font-size: 3vh;
+  margin-top: 20%;
+  text-align: start;
+  animation-name: fadeInRight;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.text p {
+  text-align: left;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import style from "./Menu.module.scss";
 
 function Menu() {
@@ -6,10 +7,19 @@ function Menu() {
     <nav className={`${style.menu} gride-12`}>
       <ul>
         <li>
-          <a className={style.about}>Sobre</a>
+          <Link to="/" className={style.presentation}>
+            Inicio
+          </Link>
         </li>
         <li>
-          <a className={style.experience}>Experiencia</a>
+          <Link className={style.about} to="/sobre">
+            Sobre
+          </Link>
+        </li>
+        <li>
+          <Link className={style.experience} to="/experiencia">
+            Experiencia
+          </Link>
         </li>
         <li>
           <a className={style.formation}>Formação</a>
