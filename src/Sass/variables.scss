@@ -1,12 +1,88 @@
 $clear-color: #ffe2df;
 $middle-color: #ffd3cf;
+$gray-color: #959595;
 $base-color: #ff6f61;
 
 $first-font: Julius Sans One, Roboto;
 $second-font: Roboto;
 
+$dividing-line: (
+  margin-top: 2%,
+  margin-left: 15%,
+  width: 20%,
+  border-color: $base-color,
+);
+
+$square1: (
+  width: 23vw,
+  height: 45vh,
+  background-color: $clear-color,
+  position: absolute,
+  top: 30%,
+  right: 3%,
+  transform: translateY(-50%),
+  border-radius: 8%,
+);
+
+$square2: (
+  width: 23vw,
+  height: 45vh,
+  background-color: $gray-color,
+  position: absolute,
+  top: 45%,
+  right: 3%,
+  transform: translateY(-50%),
+  border-radius: 5%,
+);
+$square3: (
+  width: 23vw,
+  height: 45vh,
+  background-color: $base-color,
+  position: absolute,
+  top: 40%,
+  right: 3%,
+  transform: translateY(-50%),
+  border-radius: 5%,
+);
+
 @mixin menu {
   font-family: $first-font;
   font-size: 16px;
   font-weight: 800;
+}
+
+@keyframes moveParallax1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5vh);
+  }
+  100% {
+    transform: translateX(5vh);
+  }
+}
+
+@keyframes moveParallax2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2vh);
+  }
+  100% {
+    transform: translateY(-5vh);
+  }
+}
+
+@keyframes moveParallax3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12vh);
+  }
+  100% {
+    transform: translateX(-4vh);
+  }
 }

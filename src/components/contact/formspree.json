@@ -1,0 +1,13 @@
+{
+  "forms": {
+    "contactForm": {
+      "name": "Contact Form",
+      "actions": [
+        {
+          "type": "email",
+          "to": "thiago.mendes90@yahoo.com.br"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import "../../Sass/variables.scss";
+
+.title {
+  margin-top: 25vh;
+  margin-left: 5vw;
+  font-family: $first-font;
+  font-size: 58px;
+  position: fixed;
+}
+
+.line {
+  @each $property, $value in $dividing-line {
+    #{$property}: $value;
+  }
+}
+
+.imgPhone {
+  margin-top: 22vh;
+  margin-left: 68vw;
+  width: 30vw;
+  height: 76vh;
+  border-radius: 3%;
+  position: relative;
+  z-index: 2;
+  @media (max-width: 768px) {
+    right: calc(100% - 800px);
+  }
+}
+
+.social {
+  position: absolute;
+  text-decoration: none;
+  margin-top: 80vh;
+  left: 25vw;
+}
+.social li {
+  display: inline;
+
+  padding-left: 1.8vw;
+}
+.social a:hover {
+  border-bottom: 2px solid $base-color;
+}
+.social a:focus {
+  outline-color: $base-color;
+}
+
+.contactForm {
+  position: absolute;
+  left: 25vw;
+  top: 40vh;
+  font-family: $first-font;
+}
+.contactForm div {
+  margin-bottom: 1.6vh;
+}
+
+.contactForm input,
+.contactForm textarea {
+  font-family: $first-font;
+  font-size: medium;
+  color: $gray-color;
+  background-color: transparent;
+  padding: 2vh;
+  border: none;
+  border-bottom: 1px solid $base-color;
+  border-radius: 1vh;
+  width: 30vw;
+  resize: none;
+}
+.contactForm input:focus,
+.contactForm textarea:focus {
+  outline-color: $base-color;
+}
+
+.contactForm button {
+  padding: 3% 10%;
+  background-color: darken($middle-color, 5%);
+  font-family: $first-font;
+  font-size: medium;
+  border: none;
+  border-radius: 1vh;
+  cursor: pointer;
+}
+.contactForm button:hover {
+  background-color: $base-color;
+}
+.form1 {
+  @each $property, $value in $square1 {
+    #{$property}: $value;
+  }
+
+  z-index: 1;
+  width: 30vw;
+  left: 68vw;
+  top: 45vh;
+}
+.form2 {
+  @each $property, $value in $square3 {
+    #{$property}: $value;
+  }
+  z-index: 0;
+  width: 30vw;
+  left: 68vw;
+  top: 55vh;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

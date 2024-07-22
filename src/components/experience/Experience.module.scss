@@ -3,11 +3,12 @@
 .container {
   width: 100%;
   height: 625px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 .rectangle {
   background-color: $base-color;
-  margin-left: 5%;
+  margin-left: 155%;
   border-radius: 5%;
 }
 
@@ -20,15 +21,14 @@
 }
 
 .line {
-  margin-top: 2%;
-  margin-left: 15%;
-  width: 20%;
-  border-color: $base-color;
+  @each $property, $value in $dividing-line {
+    #{$property}: $value;
+  }
 }
 
 .text {
   font-family: $second-font;
-  margin-left: 55vh;
+  margin-left: 45vh;
   text-indent: 0.5em;
   font-size: 3vh;
   margin-top: 20%;
@@ -41,7 +41,26 @@
   text-align: left;
 }
 
-@keyframes fadeInRight {
+.form1 {
+  @each $property, $value in $square1 {
+    #{$property}: $value;
+  }
+  animation: moveParallax1 8s infinite alternate;
+}
+.form2 {
+  @each $property, $value in $square3 {
+    #{$property}: $value;
+  }
+  animation: moveParallax2 8s infinite alternate;
+}
+.form3 {
+  @each $property, $value in $square2 {
+    #{$property}: $value;
+  }
+  animation: moveParallax3 8s infinite alternate;
+}
+
+@keyframes fadeInLeft {
   from {
     opacity: 0;
     transform: translateX(100%);

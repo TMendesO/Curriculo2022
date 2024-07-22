@@ -1,35 +1,99 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
 import style from "./Menu.module.scss";
 
 function Menu() {
+  const [activeMenu, setActiveMenu] = useState("");
+  const [hrStyle, setHrStyle] = useState({});
+  const menuRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === "/") setActiveMenu("presentation");
+    if (path === "/sobre") setActiveMenu("about");
+    if (path === "/experiencia") setActiveMenu("experience");
+    if (path === "/contato") setActiveMenu("contact");
+  }, [location]);
+
+  useEffect(() => {
+    if (activeMenu && menuRef.current) {
+      const activeLink = menuRef.current.querySelector(`.${style[activeMenu]}`);
+      if (activeLink) {
+        const { offsetLeft, offsetWidth } = activeLink;
+        setHrStyle({
+          left: offsetLeft,
+          width: offsetWidth,
+        });
+      }
+    }
+  }, [activeMenu]);
+
+  const handleMenuClick = (menu) => {
+    setActiveMenu(menu);
+  };
+
   return (
-    <nav className={`${style.menu} gride-12`}>
+    <nav className={`${style.menu} gride-12`} ref={menuRef}>
       <ul>
         <li>
-          <Link to="/" className={style.presentation}>
+          <Link
+            to="/"
+            className={`${style.presentation} ${
+              activeMenu === "presentation" ? style.active : ""
+            }`}
+            onClick={() => handleMenuClick("presentation")}
+          >
             Inicio
           </Link>
         </li>
         <li>
-          <Link className={style.about} to="/sobre">
+          <Link
+            to="/sobre"
+            className={`${style.about} ${
+              activeMenu === "about" ? style.active : ""
+            }`}
+            onClick={() => handleMenuClick("about")}
+          >
             Sobre
           </Link>
         </li>
         <li>
-          <Link className={style.experience} to="/experiencia">
+          <Link
+            to="/experiencia"
+            className={`${style.experience} ${
+              activeMenu === "experience" ? style.active : ""
+            }`}
+            onClick={() => handleMenuClick("experience")}
+          >
             Experiencia
           </Link>
         </li>
         <li>
-          <a className={style.formation}>Formação</a>
+          <Link
+            to="/publication"
+            className={`${style.formation} ${
+              activeMenu === "publication" ? style.active : ""
+            }`}
+            onClick={() => handleMenuClick("publication")}
+          >
+            Publicações
+          </Link>
         </li>
         <li>
-          <a className={style.contact}>Contato</a>
+          <Link
+            to="/contato"
+            className={`${style.contact} ${
+              activeMenu === "contact" ? style.active : ""
+            }`}
+            onClick={() => handleMenuClick("contact")}
+          >
+            Contato
+          </Link>
         </li>
       </ul>
 
-      <hr />
+      <hr className={`${style.activeLine} ${style.lineMenu}`} style={hrStyle} />
     </nav>
   );
 }

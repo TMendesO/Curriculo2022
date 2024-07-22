@@ -14,7 +14,7 @@ function Presentetion() {
       />
       <div className={`${style.presentation} grid-6`}>
         <h1 className={style.name}>Thiago Mendes</h1>
-        <h3 className={style.profession}>Web designer || Front-End Júnior</h3>
+        <h3 className={style.profession}>Web designer || Full Stack</h3>
       </div>
     </div>
   );

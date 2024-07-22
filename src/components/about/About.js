@@ -10,6 +10,9 @@ function About() {
         S.
         <hr className={style.line} />
       </h1>
+      <div className={`${style.form1} `}></div>
+      <div className={`${style.form2} `}></div>
+      <div className={`${style.form3}`}></div>
 
       <p className={`${style.textAbout} grid-8`}>
         Ao longo dos anos, desenvolvi habilidades interpessoais significativas

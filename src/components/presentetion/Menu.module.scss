@@ -16,10 +16,35 @@
   padding: 2px 5px;
   display: inline-block;
 }
+.menu li a:focus {
+  outline-color: $base-color;
+}
 
 .menu li a:hover {
   transform: scale(1.04);
   color: $base-color;
+}
+
+hr {
+  margin-top: -1.9%;
+  width: 40%;
+  border-color: $base-color;
+}
+
+hr.lineMenu {
+  margin-top: -1.9%;
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  border: none;
+  background-color: $base-color;
+  transition: all 0.3s ease;
+}
+
+hr.activeLine {
+  animation-name: fadeInLeft;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 
 .presentation {
@@ -38,9 +63,13 @@
   @include menu;
 }
 
-hr {
-  margin-top: -1.9%;
-  margin-left: 32%;
-  width: 40%;
-  border-color: $base-color;
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
