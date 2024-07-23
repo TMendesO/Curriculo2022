@@ -19,15 +19,18 @@ function About() {
         Ao longo dos anos, desenvolvi habilidades interpessoais significativas
         na área de vendas, aprendendo a lidar com pessoas de diferentes perfis.
         Em 2017, decidi migrar para a Tecnologia da Informação, onde descobri
-        minha verdadeira paixão. Minha experiência inclui suporte técnico,
-        infraestrutura e, mais recentemente, atuação como desenvolvedor Full
-        Stack desde 2022. Foco em aprimorar minhas habilidades em tecnologias
-        como .NET, Node.js, SQL e AWS. Busco constantemente aprofundar meu
-        conhecimento, explorando novas tecnologias e participando de cursos.
-        Estou aberto a oportunidades de aprendizado e projetos desafiadores que
-        contribuam para meu crescimento profissional como desenvolvedor.
-        Conectar-me e colaborar com equipes talentosas é uma prioridade. Estou
-        disponível para novas parcerias e conexões.
+        minha verdadeira paixão.
+        <p>
+          Minha experiência inclui suporte técnico, infraestrutura e, mais
+          recentemente, atuação como desenvolvedor Full Stack desde 2022. Foco
+          em aprimorar minhas habilidades em tecnologias como .NET, Node.js, SQL
+          e AWS. Busco constantemente aprofundar meu conhecimento, explorando
+          novas tecnologias e participando de cursos. Estou aberto a
+          oportunidades de aprendizado e projetos desafiadores que contribuam
+          para meu crescimento profissional como desenvolvedor. Conectar-me e
+          colaborar com equipes talentosas é uma prioridade. Estou disponível
+          para novas parcerias e conexões.
+        </p>
       </p>
     </div>
   );

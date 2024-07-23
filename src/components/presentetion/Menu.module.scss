@@ -1,5 +1,25 @@
 @import "../../Sass/variables.scss";
 
+.nav {
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+
 .menu {
   list-style: none;
   position: absolute;
@@ -7,11 +27,20 @@
   right: 4vw;
   padding: 0;
   margin: 0;
+
   @media (max-width: 768px) {
+    display: none;
     position: fixed;
-    left: 25vw;
-    text-align: center;
+    top: -1vh;
+    left: 0;
     width: 100%;
+    background: $clear-color;
+    z-index: 5;
+    text-align: center;
+  }
+
+  &.open {
+    display: block;
   }
 }
 
@@ -19,6 +48,7 @@
   display: inline;
   margin: 0 0 0 15px;
   cursor: pointer;
+
   @media (max-width: 768px) {
     display: block;
     margin: 10px 0;
@@ -30,6 +60,7 @@
   text-decoration: none;
   padding: 2px 5px;
   display: inline-block;
+
   @media (max-width: 768px) {
     display: block;
     width: 100%;
@@ -61,6 +92,7 @@ hr.lineMenu {
   background-color: $base-color;
   transition: all 0.3s ease;
   display: block;
+
   @media (max-width: 768px) {
     display: none;
   }

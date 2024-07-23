@@ -5,6 +5,7 @@ import style from "./Menu.module.scss";
 function Menu() {
   const [activeMenu, setActiveMenu] = useState("");
   const [hrStyle, setHrStyle] = useState({});
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const location = useLocation();
 
@@ -32,11 +33,22 @@ function Menu() {
 
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
+    setIsMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className={`${style.menu} gride-12`} ref={menuRef}>
-      <ul>
+    <nav className={style.nav}>
+      <button className={style.hamburger} onClick={toggleMenu}>
+        ☰
+      </button>
+      <ul
+        className={`${style.menu} ${isMenuOpen ? style.open : ""}`}
+        ref={menuRef}
+      >
         <li>
           <Link
             to="/"

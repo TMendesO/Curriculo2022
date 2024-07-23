@@ -16,17 +16,17 @@
   @media (max-width: 1024px) {
     width: 40%;
     left: 1vw;
-    margin-top: 45vh;
+    margin-top: 5vh;
   }
   @media (max-width: 768px) {
     width: 50%;
     left: 1vw;
-    margin-top: 45vh;
+    margin-top: 5vh;
   }
   @media (max-width: 480px) {
     width: 70%;
     left: 1vw;
-    margin-top: 45vh;
+    margin-top: 17vh;
   }
 }
 
@@ -40,12 +40,12 @@
   animation-fill-mode: forwards;
   z-index: 1;
   @media (max-width: 768px) {
-    margin-top: 35vh;
+    margin-top: 5vh;
     left: -0.5vw;
     transform: translateX(-50%);
   }
   @media (max-width: 480px) {
-    margin-top: 35vh;
+    margin-top: 5vh;
     left: -0.5vw;
     transform: translateX(-50%);
   }
