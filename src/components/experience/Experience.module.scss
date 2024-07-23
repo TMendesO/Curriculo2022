@@ -6,6 +6,7 @@
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 .rectangle {
   background-color: $base-color;
   margin-left: 155%;
@@ -28,7 +29,7 @@
 
 .text {
   font-family: $second-font;
-  margin-left: 45vh;
+  margin-left: 30vh;
   text-indent: 0.5em;
   font-size: 3vh;
   margin-top: 20%;
@@ -37,6 +38,7 @@
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
+
 .text p {
   text-align: left;
 }
@@ -46,21 +48,32 @@
     #{$property}: $value;
   }
   animation: moveParallax1 8s infinite alternate;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
+
 .form2 {
   @each $property, $value in $square3 {
     #{$property}: $value;
   }
   animation: moveParallax2 8s infinite alternate;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
+
 .form3 {
   @each $property, $value in $square2 {
     #{$property}: $value;
   }
   animation: moveParallax3 8s infinite alternate;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeInRight {
   from {
     opacity: 0;
     transform: translateX(100%);
@@ -68,5 +81,62 @@
   to {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 48px;
+    margin-left: 3%;
+  }
+
+  .text {
+    margin-left: 10vw;
+    font-size: 1.8vh;
+    margin-top: 15vh;
+    width: 60%;
+  }
+
+  .rectangle {
+    margin-left: 100%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+    margin-left: 2%;
+  }
+
+  .text {
+    margin-left: 10vw;
+    font-size: 1.8vh;
+    margin-top: 15vh;
+    width: 60%;
+  }
+
+  .rectangle {
+    margin-left: 50%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+    margin-left: 1%;
+  }
+
+  .text {
+    margin-left: 10vw;
+    font-size: 1.8vh;
+    margin-top: 15vh;
+    width: 60%;
+  }
+
+  .rectangle {
+    margin-left: 0;
+    width: 100%;
   }
 }

@@ -1,11 +1,22 @@
 @import "../../Sass/variables.scss";
 
+div {
+  margin: 0;
+  padding: 0;
+}
+
 .title {
   margin-top: 25vh;
   margin-left: 5vw;
   font-family: $first-font;
   font-size: 58px;
   position: fixed;
+
+  @media (max-width: 768px) {
+    margin-top: 10vh;
+    font-size: 32px;
+    margin-left: 3vw;
+  }
 }
 
 .line {
@@ -22,8 +33,9 @@
   border-radius: 3%;
   position: relative;
   z-index: 2;
+
   @media (max-width: 768px) {
-    right: calc(100% - 800px);
+    display: none;
   }
 }
 
@@ -32,15 +44,28 @@
   text-decoration: none;
   margin-top: 80vh;
   left: 25vw;
+
+  @media (max-width: 768px) {
+    margin-top: 57vh;
+    left: 10vw;
+  }
 }
+
 .social li {
   display: inline;
-
   padding-left: 1.8vw;
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+    padding-top: 1vh;
+    display: inline;
+  }
 }
+
 .social a:hover {
   border-bottom: 2px solid $base-color;
 }
+
 .social a:focus {
   outline-color: $base-color;
 }
@@ -50,7 +75,14 @@
   left: 25vw;
   top: 40vh;
   font-family: $first-font;
+
+  @media (max-width: 768px) {
+    left: 10vw;
+    top: 30vh;
+    width: 80vw;
+  }
 }
+
 .contactForm div {
   margin-bottom: 1.6vh;
 }
@@ -67,7 +99,13 @@
   border-radius: 1vh;
   width: 30vw;
   resize: none;
+
+  @media (max-width: 768px) {
+    width: 70vw;
+    padding: 1.5vh;
+  }
 }
+
 .contactForm input:focus,
 .contactForm textarea:focus {
   outline-color: $base-color;
@@ -81,10 +119,17 @@
   border: none;
   border-radius: 1vh;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 70vw;
+    padding: 2% 5%;
+  }
 }
+
 .contactForm button:hover {
   background-color: $base-color;
 }
+
 .form1 {
   @each $property, $value in $square1 {
     #{$property}: $value;
@@ -94,15 +139,25 @@
   width: 30vw;
   left: 68vw;
   top: 45vh;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
+
 .form2 {
   @each $property, $value in $square3 {
     #{$property}: $value;
   }
+
   z-index: 0;
   width: 30vw;
   left: 68vw;
   top: 55vh;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 @keyframes fadeInLeft {

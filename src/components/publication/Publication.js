@@ -1,6 +1,6 @@
-// src/Repositories.js
 import React, { useEffect, useState } from "react";
 import Menu from "../presentetion/Menu";
+import style from "./Publication.module.scss";
 import axios from "axios";
 
 function Repositories() {
@@ -14,7 +14,10 @@ function Repositories() {
         const response = await axios.get(
           "https://api.github.com/users/TMendesO/repos"
         );
-        setRepos(response.data);
+        const sortedRepos = response.data.sort(
+          (a, b) => new Date(b.updated_at) - new Date(a.updated_at)
+        );
+        setRepos(sortedRepos);
       } catch (error) {
         setError(error.message);
       } finally {
@@ -29,16 +32,27 @@ function Repositories() {
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
+    <div className={style.publication}>
       <Menu />
-      <h1>Meus Repositórios Públicos</h1>
-      <ul>
+      <h1 className={`${style.title} grid-6`}>
+        P.
+        <hr className={style.line} />
+      </h1>
+      <div className={`${style.form1} `}></div>
+      <div className={`${style.form2} `}></div>
+      <div className={`${style.form3}`}></div>
+      <ul className={style.repoList}>
         {repos.map((repo) => (
-          <li key={repo.id}>
-            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+          <li key={repo.id} className={style.repoItem}>
+            <a
+              href={repo.html_url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={style.repoName}
+            >
               {repo.name}
             </a>
-            <p>{repo.description}</p>
+            <p className={style.repoDescription}>{repo.description}</p>
           </li>
         ))}
       </ul>

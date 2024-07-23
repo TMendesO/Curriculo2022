@@ -15,6 +15,7 @@ function About() {
       <div className={`${style.form3}`}></div>
 
       <p className={`${style.textAbout} grid-8`}>
+        <h4>Olá! Eu sou o Thiago</h4>
         Ao longo dos anos, desenvolvi habilidades interpessoais significativas
         na área de vendas, aprendendo a lidar com pessoas de diferentes perfis.
         Em 2017, decidi migrar para a Tecnologia da Informação, onde descobri

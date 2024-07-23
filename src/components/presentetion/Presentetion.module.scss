@@ -1,39 +1,86 @@
 @import "../../Sass/variables.scss";
 
 .imgPerfil {
-  margin-top: 4%;
-  margin-left: 70%;
-  height: 80%;
+  margin-top: 10vh;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
   width: 28%;
   padding: 0;
-  right: calc(100% - 959px);
-  top: 0;
-  left: 0;
+  right: 0;
+  left: 65vw;
   object-fit: cover;
+  max-width: 100%;
+  z-index: 0;
+  @media (max-width: 1024px) {
+    width: 40%;
+    left: 1vw;
+    margin-top: 45vh;
+  }
   @media (max-width: 768px) {
-    right: calc(100% - 800px);
+    width: 50%;
+    left: 1vw;
+    margin-top: 45vh;
+  }
+  @media (max-width: 480px) {
+    width: 70%;
+    left: 1vw;
+    margin-top: 45vh;
   }
 }
 
 .presentation {
   position: absolute;
-  margin-top: 25%;
-  left: 15%;
+  margin-top: 50vh;
+  left: 10%;
+  right: 10%;
   animation-name: fadeInLeft;
   animation-duration: 2s;
   animation-fill-mode: forwards;
+  z-index: 1;
+  @media (max-width: 768px) {
+    margin-top: 35vh;
+    left: -0.5vw;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 480px) {
+    margin-top: 35vh;
+    left: -0.5vw;
+    transform: translateX(-50%);
+  }
 }
+
 .name {
   margin-bottom: 0;
   font-family: $first-font;
-  font-size: 58px;
+  font-size: 4vw;
+  @media (max-width: 768px) {
+    margin-left: 20vw;
+    font-size: 6vw;
+  }
+  @media (max-width: 480px) {
+    margin-left: 20vw;
+    font-size: 8vw;
+  }
 }
+
 .profession {
   margin: 0;
   font-family: $second-font;
-  font-size: 28px;
+  font-size: 2vw;
   font-weight: 400;
   margin-left: 3vw;
+  @media (max-width: 768px) {
+    font-size: 4vw;
+    margin-left: 0;
+    text-align: center;
+  }
+  @media (max-width: 480px) {
+    font-size: 5vw;
+    margin-left: 0;
+    text-align: center;
+  }
 }
 
 @keyframes fadeInLeft {

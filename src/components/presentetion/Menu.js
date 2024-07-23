@@ -13,6 +13,7 @@ function Menu() {
     if (path === "/") setActiveMenu("presentation");
     if (path === "/sobre") setActiveMenu("about");
     if (path === "/experiencia") setActiveMenu("experience");
+    if (path === "/publication") setActiveMenu("publication");
     if (path === "/contato") setActiveMenu("contact");
   }, [location]);
 

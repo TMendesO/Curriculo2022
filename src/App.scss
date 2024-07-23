@@ -4,5 +4,115 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden; // Evita rolagem horizontal desnecessária
+}
+
+// Definições globais de estilo para responsividade
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+// Classe utilitária para elementos responsivos
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+// Exemplo de ajustes responsivos
+.container {
+  padding: 20px;
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+}
+
+// Menu responsivo
+.menu {
+  list-style: none;
+  position: absolute;
+  left: 62vw;
+  @media (max-width: 768px) {
+    position: static;
+    padding: 0;
+    text-align: center;
+  }
+}
+.menu li {
+  display: inline;
+  margin: 0 0 0 15px;
+  cursor: pointer;
+  @media (max-width: 768px) {
+    display: block;
+    margin: 10px 0;
+  }
+}
+.menu li a {
+  color: black;
+  text-decoration: none;
+  padding: 2px 5px;
+  display: inline-block;
+  @media (max-width: 768px) {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+.menu li a:focus {
+  outline-color: $base-color;
+}
+
+.menu li a:hover {
+  transform: scale(1.04);
+  color: $base-color;
+}
+
+hr {
+  margin-top: -1.9%;
+  width: 40vw;
+  border-color: $base-color;
+}
+
+hr.lineMenu {
+  margin-top: -1.9%;
+  position: absolute;
+  bottom: -5px;
+  height: 0.4vh;
+  border: none;
+  background-color: $base-color;
+  transition: all 0.3s ease;
+}
+
+hr.activeLine {
+  animation-name: fadeInLeft;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.presentation {
+  @include menu;
+}
+.about {
+  @include menu;
+}
+.experience {
+  @include menu;
+}
+.formation {
+  @include menu;
+}
+.contact {
+  @include menu;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
