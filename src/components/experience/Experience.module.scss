@@ -16,7 +16,7 @@
 .title {
   margin-top: 12%;
   margin-left: 5%;
-  font-family: $first-font;
+  font-family: $third-font;
   font-size: 58px;
   position: fixed;
 }
@@ -34,7 +34,7 @@
   font-size: 3vh;
   margin-top: 20%;
   text-align: start;
-  animation-name: fadeInRight;
+  animation-name: fadeInLeft;
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
@@ -73,10 +73,10 @@
   }
 }
 
-@keyframes fadeInRight {
+@keyframes fadeInLeft {
   from {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
   to {
     opacity: 1;

@@ -1,10 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+
 $clear-color: #ffe2df;
 $middle-color: #ffd3cf;
 $gray-color: #959595;
 $base-color: #ff6f61;
 
-$first-font: Julius Sans One, Roboto;
-$second-font: Roboto;
+$first-font: "Julius Sans One";
+$second-font: "Raleway", "Roboto", sans-serif;
+$third-font: "Berkshire Swash", "Julius Sans One", cursive;
 
 $dividing-line: (
   margin-top: 2%,

@@ -40,7 +40,7 @@ function Contact() {
   };
 
   return (
-    <div>
+    <div className={style.contact}>
       <Menu />
       <h1 className={`${style.title} grid-6`}>
         C.

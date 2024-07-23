@@ -23,7 +23,7 @@
 .menu {
   list-style: none;
   position: absolute;
-  top: 0;
+  top: 2vh;
   right: 4vw;
   padding: 0;
   margin: 0;
@@ -60,6 +60,7 @@
   text-decoration: none;
   padding: 2px 5px;
   display: inline-block;
+  font-size: large;
 
   @media (max-width: 768px) {
     display: block;
