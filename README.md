@@ -44,34 +44,9 @@ package.json
 README.md
 ```
 
-## Instalação
 
-Para executar este projeto localmente, siga os seguintes passos:
 
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
-
-2. Navegue até o diretório do projeto:
-
-   ```bash
-   cd seu-repositorio
-   ```
-
-3. Instale as dependências:
-
-   ```bash
-   npm install
-   ```
-
-4. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm start
-   ```
-
-O projeto estará disponível em `http://localhost:3000`.
+O projeto estará disponível em `https://tmendeso.netlify.app/publication`.
 
 ## Estilos
 
@@ -83,4 +58,4 @@ Se você quiser contribuir com este projeto, sinta-se à vontade para abrir issu
 
 ---
 
-Sinta-se à vontade para ajustar qualquer parte conforme necessário!
+Sinta-se à vontade para contribuir em qualquer parte!
