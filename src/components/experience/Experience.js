@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Menu from "../presentetion/Menu";
 import style from "./Experience.module.scss";
 
