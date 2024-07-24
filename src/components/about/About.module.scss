@@ -92,7 +92,7 @@
     text-wrap: pretty;
   }
 }
-@media (width: 1432px) {
+@media (min-width: 1024px) and (width: 1432px) {
   .textAbout {
     margin-top: 5vh;
     margin-left: 18vw;
