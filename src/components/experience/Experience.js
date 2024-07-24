@@ -22,9 +22,9 @@ function Experience() {
         </h3>
         <p>
           {" "}
-          Na minha função atual na empresa, desempenho um papel essencial como
-          desenvolvedor back-end, com foco específico na área de leituras de
-          DANFs (Documentos Auxiliares da Nota Fiscal) e notas fiscais.
+          &nbsp; Na minha função atual na empresa, desempenho um papel essencial
+          como desenvolvedor back-end, com foco específico na área de leituras
+          de DANFs (Documentos Auxiliares da Nota Fiscal) e notas fiscais.
           Utilizando a linguagem de programação C# e a tecnologia OCR (Optical
           Character Recognition), trabalho no desenvolvimento de soluções que
           automatizam a extração e interpretação de dados desses documentos.
@@ -32,7 +32,7 @@ function Experience() {
           eficiência operacional da empresa.
         </p>
         <p>
-          Além das atividades de desenvolvimento, também assumo a
+          &nbsp; Além das atividades de desenvolvimento, também assumo a
           responsabilidade de ser um analista de suporte. Nessa função, lido
           diretamente com questões técnicas e forneço suporte aos usuários dos
           sistemas. Estou constantemente disponível para solucionar problemas,

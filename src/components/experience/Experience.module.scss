@@ -29,7 +29,7 @@
 
 .text {
   font-family: $second-font;
-  margin-left: 30vh;
+  margin-left: 20vh;
   text-indent: 0.5em;
   font-size: 3vh;
   margin-top: 20%;
@@ -40,7 +40,8 @@
 }
 
 .text p {
-  text-align: left;
+  text-align: start;
+  text-wrap: pretty;
 }
 
 .form1 {
@@ -96,6 +97,10 @@
     margin-top: 15vh;
     width: 60%;
   }
+  .text p {
+    text-align: start;
+    text-wrap: pretty;
+  }
 
   .rectangle {
     margin-left: 100%;
@@ -115,6 +120,10 @@
     margin-top: 15vh;
     width: 60%;
   }
+  .text p {
+    text-align: start;
+    text-wrap: pretty;
+  }
 
   .rectangle {
     margin-left: 50%;
@@ -133,6 +142,10 @@
     font-size: 1.8vh;
     margin-top: 15vh;
     width: 60%;
+  }
+  .text p {
+    text-align: start;
+    text-wrap: pretty;
   }
 
   .rectangle {

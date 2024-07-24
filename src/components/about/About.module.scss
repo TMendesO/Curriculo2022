@@ -55,6 +55,7 @@
   font-size: 20px;
   margin-top: -13vh;
   text-align: start;
+  text-wrap: pretty;
   animation-name: fadeInLeft;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -87,6 +88,14 @@
     font-size: 1.8vh;
     margin-top: 10vh;
     width: 70%;
+    text-align: start;
+    text-wrap: pretty;
+  }
+}
+@media (width: 1432px) {
+  .textAbout {
+    margin-top: 5vh;
+    margin-left: 18vw;
   }
 }
 
@@ -106,6 +115,8 @@
     font-size: 1.8vh;
     margin-top: 10vh;
     width: 70%;
+    text-align: start;
+    text-wrap: pretty;
   }
 }
 
@@ -127,5 +138,7 @@
     font-size: 1.8vh;
     margin-top: 10vh;
     width: 60%;
+    text-align: start;
+    text-wrap: pretty;
   }
 }
