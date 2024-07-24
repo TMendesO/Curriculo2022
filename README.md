@@ -46,7 +46,7 @@ README.md
 
 
 
-O projeto estará disponível em `https://tmendeso.netlify.app/publication`.
+O projeto estará disponível em `[https://tmendeso.netlify.app](https://tmendeso.netlify.app/)`.
 
 ## Estilos
 
