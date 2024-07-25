@@ -84,7 +84,7 @@ function Menu() {
         </li>
         <li>
           <Link
-            to="/publication"
+            to="/publicacao"
             className={`${style.formation} ${
               activeMenu === "publication" ? style.active : ""
             }`}

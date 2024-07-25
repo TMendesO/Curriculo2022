@@ -47,12 +47,12 @@
 .social {
   position: absolute;
   text-decoration: none;
-  margin-top: 80vh;
+  margin-top: 85vh;
   left: 25vw;
 
   @media (max-width: 768px) {
-    margin-top: 57vh;
-    left: 35vw;
+    margin-top: 60vh;
+    left: 19vw;
   }
 }
 
@@ -82,7 +82,7 @@
   font-family: $first-font;
 
   @media (max-width: 768px) {
-    left: 25vw;
+    left: 12vw;
     top: 30vh;
     width: 80vw;
   }

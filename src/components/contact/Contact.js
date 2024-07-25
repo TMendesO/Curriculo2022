@@ -50,6 +50,7 @@ function Contact() {
         src={ContactPhone}
         className={`${style.imgPhone} grid-4`}
         alt="telefone pendurado"
+        loading="lazy"
       />
       <div className={`${style.form1} `}></div>
       <div className={`${style.form2} `}></div>
