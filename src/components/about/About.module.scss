@@ -92,6 +92,13 @@
     text-wrap: pretty;
   }
 }
+@media (max-width: 1920px) {
+  .textAbout {
+    margin-top: 5vh;
+    margin-right: 50vw;
+    font-size: 2vh;
+  }
+}
 @media (min-width: 1024px) and (width: 1432px) {
   .textAbout {
     margin-top: 5vh;

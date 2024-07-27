@@ -4,7 +4,7 @@ import style from "./Menu.module.scss";
 
 function Menu() {
   const [activeMenu, setActiveMenu] = useState("");
-  const [hrStyle, setHrStyle] = useState({});
+  /*  const [hrStyle, setHrStyle] = useState({}); */
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef(null);
   const location = useLocation();
@@ -14,23 +14,24 @@ function Menu() {
     if (path === "/") setActiveMenu("presentation");
     if (path === "/sobre") setActiveMenu("about");
     if (path === "/experiencia") setActiveMenu("experience");
-    if (path === "/publication") setActiveMenu("publication");
+    if (path === "/publicacao") setActiveMenu("publication");
     if (path === "/contato") setActiveMenu("contact");
   }, [location]);
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (activeMenu && menuRef.current) {
       const activeLink = menuRef.current.querySelector(`.${style[activeMenu]}`);
       if (activeLink) {
-        const { offsetLeft, offsetWidth } = activeLink;
+        const { offsetLeft, offsetWidth, offsetTop, offsetHeight } = activeLink;
         setHrStyle({
           left: offsetLeft,
           width: offsetWidth,
+          top: offsetTop + offsetHeight,
         });
       }
     }
   }, [activeMenu]);
-
+ */
   const handleMenuClick = (menu) => {
     setActiveMenu(menu);
     setIsMenuOpen(false);
@@ -106,7 +107,7 @@ function Menu() {
         </li>
       </ul>
 
-      <hr className={`${style.activeLine} ${style.lineMenu}`} style={hrStyle} />
+      {/* <hr className={`${style.activeLine} ${style.lineMenu}`} style={hrStyle} /> */}
     </nav>
   );
 }

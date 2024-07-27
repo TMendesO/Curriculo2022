@@ -38,6 +38,10 @@
     z-index: 5;
     text-align: center;
   }
+  @media (max-width: 1920px) {
+    right: 15vh;
+    font-size: 2vh;
+  }
 
   &.open {
     display: block;
@@ -79,15 +83,11 @@
 }
 
 hr {
-  margin-top: -1.9%;
-  width: 40vw;
-  border-color: $base-color;
   display: none;
 }
 
 hr.lineMenu {
   position: absolute;
-  bottom: -5px;
   height: 0.4vh;
   border: none;
   background-color: $base-color;

@@ -28,6 +28,9 @@
     left: 1vw;
     margin-top: 17vh;
   }
+  @media (max-width: 1920px) {
+    top: 10vh;
+  }
 }
 
 .presentation {
@@ -48,6 +51,9 @@
     margin-top: 5vh;
     left: -0.5vw;
     transform: translateX(-50%);
+  }
+  @media (max-width: 1920px) {
+    width: 100%;
   }
 }
 
